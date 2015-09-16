@@ -1,0 +1,33 @@
+$-fb: 0px 0px 0px 0px 22px 22px 46px 46px '../../../dist/img/common/sprites@1x.png';
+$-google-plus: 24px 0px -24px 0px 22px 22px 46px 46px '../../../dist/img/common/sprites@1x.png';
+$-twitter: 0px 24px 0px -24px 22px 22px 46px 46px '../../../dist/img/common/sprites@1x.png';
+
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite-background-size($sprite) {
+  background-size: nth($sprite, 7) nth($sprite, 8);
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
