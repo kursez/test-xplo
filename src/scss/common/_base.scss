@@ -17,6 +17,13 @@ body {
   font-family: $font-arial;
   font-size: $font-size;
   line-height: $font-line-height;
+  background-color: $background;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 a {

@@ -10,3 +10,34 @@
     clear: both;
   }
 }
+
+%reset-list {
+  list-style: none;
+  padding-left: 0;
+  white-space: nowrap;
+  > li {
+    white-space: normal;
+  }
+}
+
+@mixin vertical-gradient($start: #000, $stop: #FFF) {
+  background: ($start + $stop) / 2;
+  background: -webkit-gradient(linear, left top, left bottom, from($start), to($stop));
+  background: -moz-linear-gradient(center top, $start 0%, $stop 100%);
+  background: -moz-gradient(center top, $start 0%, $stop 100%);
+}
+
+@mixin vertical-dots($color: rgba(255, 255, 255, 0.4), $width: 1px, $height: 5px) {
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $width;
+    height: 100%;
+    background-image: linear-gradient($color 33%, rgba(255, 255, 255, 0) 0%);
+    background-position: left;
+    background-size: $width $height;
+    background-repeat: repeat-y;
+  }
+}

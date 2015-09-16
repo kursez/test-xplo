@@ -1,0 +1,49 @@
+.article {
+  padding-top: 30px;
+  @extend %clearfix;
+}
+
+.article-title {
+  margin: 0 0 15px;
+  font-size: 14px;
+  font-weight: 800;
+  color: $article-title;
+}
+
+.article-image {
+  float: left;
+  display: block;
+}
+
+.article-content {
+  float: left;
+  width: 170px;
+  font-size: 13px;
+  padding-left: 20px;
+  color: $text-brown;
+  line-height: 1.6em;
+  margin: 0;
+}
+
+.article-text {
+  display: block;
+  overflow: hidden;
+  max-height: 9em;
+  margin: -5px 0 15px;
+  text-overflow: ellipsis;
+}
+
+.article-more {
+  cursor: pointer;
+  color: $text-pink;
+  font-size: 12px;
+  &> * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.article-more-icon {
+  margin-left: 8px;
+  @include sprite-retina($-more-arrow, $-more-arrow);
+}
