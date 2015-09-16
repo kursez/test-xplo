@@ -1,0 +1,20 @@
+{
+  "generator-xh": {
+    "config": {
+      "projectName": "test-xplo",
+      "useBranding": true,
+      "extension": "html",
+      "reloader": "BrowserSync",
+      "server": true,
+      "cssPreprocessor": "LIBSASS",
+      "ignoreDist": true,
+      "isWP": false,
+      "features": [
+        "useSprites",
+        "useBootstrap",
+        "useModernizr",
+        "useCSS3Pie"
+      ]
+    }
+  }
+}
