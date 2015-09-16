@@ -11,6 +11,13 @@
   }
 }
 
+%center-items {
+  & > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
 %reset-list {
   list-style: none;
   padding-left: 0;
@@ -40,4 +47,36 @@
     background-size: $width $height;
     background-repeat: repeat-y;
   }
+}
+
+@mixin horizontal-dots($color: rgba(255, 255, 255, 0.4), $width: 5px, $height: 1px) {
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: $height;
+    background-image: linear-gradient(to right, $color 33%, rgba(255, 255, 255, 0) 0%);
+    background-position: bottom;
+    background-size: $width $height;
+    background-repeat: repeat-x;
+  }
+}
+
+@mixin border-radius($radius: 5px) {
+  -webkit-background-clip: padding-box;
+  -webkit-border-radius: $radius;
+  -moz-background-clip: padding-box;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;
+}
+
+@mixin border-shadow($top: none, $right: 2px solid $dark-shadow, $bottom: 2px solid $dark-shadow, $left: none, $radius: 10px) {
+  border-top: $top;
+  border-right: $right;
+  border-bottom: $bottom;
+  border-left: $left;
+  @include border-radius($radius);
 }

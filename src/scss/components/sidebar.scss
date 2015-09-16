@@ -1,0 +1,31 @@
+.sidebar {
+  width: 300px;
+  margin-top: 15px;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-elem {
+  background-color: white;
+  padding: 18px 0 16px;
+  margin-bottom: 20px;
+  @include border-shadow();
+}
+
+.sidebar-elem-title {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 800;
+  color: $text-pink;
+  margin: 0;
+  padding: 0 20px 18px;
+  position: relative;
+  @include horizontal-dots(rgba(0, 0, 0, 0.2));
+}
+
+.sidebar-elem-content {
+  padding: 16px 20px 0;
+}

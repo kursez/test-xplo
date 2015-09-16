@@ -37,9 +37,9 @@
   cursor: pointer;
   color: $text-pink;
   font-size: 12px;
-  &> * {
-    display: inline-block;
-    vertical-align: middle;
+  @extend %center-items;
+  &:hover {
+    color: $text-pink;
   }
 }
 
