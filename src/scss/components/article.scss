@@ -45,5 +45,5 @@
 
 .article-more-icon {
   margin-left: 8px;
-  @include sprite-retina($-more-arrow, $-more-arrow);
+  @include sprite-retina($sprites1x-more-arrow, $sprites2x-more-arrow);
 }

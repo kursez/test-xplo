@@ -1,8 +1,8 @@
-$-fb: 0px 0px 0px 0px 22px 22px 46px 46px '../../../dist/img/common/sprites@1x.png';
-$-google-plus: 24px 0px -24px 0px 22px 22px 46px 46px '../../../dist/img/common/sprites@1x.png';
-$-gray-arrow: 24px 24px -24px -24px 12px 9px 46px 46px '../../../dist/img/common/sprites@1x.png';
-$-more-arrow: 24px 35px -24px -35px 12px 9px 46px 46px '../../../dist/img/common/sprites@1x.png';
-$-twitter: 0px 24px 0px -24px 22px 22px 46px 46px '../../../dist/img/common/sprites@1x.png';
+$sprites1x-fb: 0px 0px 0px 0px 22px 22px 46px 46px '../../../dist/img/common/sprites@1x.png';
+$sprites1x-google-plus: 24px 0px -24px 0px 22px 22px 46px 46px '../../../dist/img/common/sprites@1x.png';
+$sprites1x-gray-arrow: 24px 24px -24px -24px 12px 9px 46px 46px '../../../dist/img/common/sprites@1x.png';
+$sprites1x-more-arrow: 24px 35px -24px -35px 12px 9px 46px 46px '../../../dist/img/common/sprites@1x.png';
+$sprites1x-twitter: 0px 24px 0px -24px 22px 22px 46px 46px '../../../dist/img/common/sprites@1x.png';
 
 @mixin sprite-width($sprite) {
   width: nth($sprite, 5);
