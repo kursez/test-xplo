@@ -28,7 +28,7 @@
 .article-text {
   display: block;
   overflow: hidden;
-  max-height: 9em;
+  max-height: 9.2em;
   margin: -5px 0 15px;
   text-overflow: ellipsis;
 }
@@ -45,5 +45,5 @@
 
 .article-more-icon {
   margin-left: 8px;
-  @include sprite-retina($sprites1x-more-arrow, $sprites2x-more-arrow);
+  @include sprite-retina($sprite-1x-more-arrow, $sprite-2x-more-arrow);
 }

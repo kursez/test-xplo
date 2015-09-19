@@ -6,7 +6,7 @@
     text-decoration: none;
     &:hover {
       .random-articles-icon {
-        @include sprite-retina($sprites1x-more-arrow, $sprites2x-more-arrow);
+        @include sprite-retina($sprite-1x-more-arrow, $sprite-2x-more-arrow);
       }
       .random-articles-title {
         color: $text-pink;
@@ -22,7 +22,7 @@
 .random-articles-icon {
   display: inline-block;
   margin-right: 10px;
-  @include sprite-retina($sprites1x-gray-arrow, $sprites2x-gray-arrow);
+  @include sprite-retina($sprite-1x-gray-arrow, $sprite-2x-gray-arrow);
 }
 
 .random-articles-title {
