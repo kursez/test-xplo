@@ -10,9 +10,10 @@
     "tests"
   ],
   "dependencies": {
-    "modernizr": "^2.8.3",
     "bootstrap-sass": "^3.3.5",
-    "jquery": "^1.11.2"
+    "jquery": "^1.11.2",
+    "jquery-colorbox": "colorbox#~1.6.3",
+    "modernizr": "^2.8.3"
   },
   "devDependencies": {}
 }

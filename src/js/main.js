@@ -16,24 +16,49 @@
      * Init Function
      */
     init: function() {
-      // App.feature1();
-      // App.feature2();
+       App.sliderColorbox();
     },
 
     /**
      * Custom feature 1
      */
-    feature1: function() {
+    sliderColorbox: function() {
+        var images = $('[data-colorbox]'),
+            count = images.size(),
+            interval;
 
-    },
+        function resetSlider() {
+            $(document).unbind('cbox_open');
+            clearInterval(interval);
+        }
 
-    /**
-     * Custom feature 2
-     */
-    feature2: function() {
+        $(document).bind('cbox_open', function() {
+            interval = setInterval(function() {
+                count -= 1;
 
+                if (count > 0) {
+                    $.colorbox.next();
+                } else {
+                    $.colorbox.close();
+                    resetSlider();
+                }
+            }, 2000);
+        });
+
+        $(document).bind('cbox_closed', function() {
+            resetSlider();
+            $(document).unbind('cbox_closed');
+        });
+
+        $(document).ready(function() {
+            images.colorbox({
+                rel:'gal',
+                open: true,
+                width: '600px',
+                height: '300px'
+            });
+        });
     }
-
   };
 
   $(function() {
