@@ -36,3 +36,12 @@
   display: inline-block;
   margin-right: 3px;
 }
+
+@media all and (max-width:479px) {
+  .social-elem {
+    float: none;
+  }
+  .social-elem:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}

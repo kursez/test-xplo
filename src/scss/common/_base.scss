@@ -35,3 +35,9 @@ a {
     text-decoration: underline;
   }
 }
+
+@media all and (max-width:991px) {
+  .container {
+   width: 100% !important;
+  }
+}

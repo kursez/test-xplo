@@ -47,3 +47,24 @@
   text-shadow: $text-pink-shadow -1px -1px;
   @include vertical-gradient($gradient-pink-up, $gradient-pink-down);
 }
+
+@media (max-width:991px) {
+  .news {
+    width: 100%;
+  }
+}
+
+@media all and (max-width:479px) {
+  .news-category {
+    width: 100%;
+    float: none;
+    &:last-child {
+      .news-article-list:after {
+        display: none;
+      }
+      .news-category-title:after {
+        display: none;
+      }
+    }
+  }
+}
