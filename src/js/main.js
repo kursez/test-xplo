@@ -20,7 +20,7 @@
     },
 
     /**
-     * Custom feature 1
+     * Slider Colorbox
      */
     sliderColorbox: function() {
         var images = $('[data-colorbox]'),
@@ -30,9 +30,11 @@
         function resetSlider() {
             $(document).unbind('cbox_open');
             clearInterval(interval);
+            $('#cboxNext').click(function(){});
+            $('#cboxPrevious').click(function(){});
         }
 
-        $(document).bind('cbox_open', function() {
+        function setSliderInterval() {
             interval = setInterval(function() {
                 count -= 1;
 
@@ -43,6 +45,12 @@
                     resetSlider();
                 }
             }, 2000);
+        }
+
+        // Events
+
+        $(document).bind('cbox_open', function() {
+            setSliderInterval();
         });
 
         $(document).bind('cbox_closed', function() {
@@ -50,12 +58,20 @@
             $(document).unbind('cbox_closed');
         });
 
+        $('#cboxNext').click(function() {
+            resetSlider();
+        });
+
+        $('#cboxPrevious').click(function() {
+            resetSlider();
+        });
+
         $(document).ready(function() {
             images.colorbox({
                 rel:'gal',
                 open: true,
-                width: '600px',
-                height: '300px'
+                width: '80%',
+                height: '80%'
             });
         });
     }
