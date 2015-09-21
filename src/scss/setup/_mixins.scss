@@ -32,9 +32,10 @@
   background: -webkit-gradient(linear, left top, left bottom, from($start), to($stop));
   background: -moz-linear-gradient(center top, $start 0%, $stop 100%);
   background: -moz-gradient(center top, $start 0%, $stop 100%);
+  behavior: url(../js/PIE.htc);
 }
 
-@mixin vertical-dots($color: rgba(255, 255, 255, 0.4), $width: 1px, $height: 5px) {
+@mixin vertical-dots($color: rgba(255, 255, 255, 0.4), $width: 1px, $height: 5px, $png: '../img/gradient/vertical-gradient-white.png') {
   &:after {
     content: '';
     position: absolute;
@@ -42,10 +43,12 @@
     left: 0;
     width: $width;
     height: 100%;
-    background-image: linear-gradient($color 33%, rgba(255, 255, 255, 0) 0%);
+    background-image: url($png);
+    background: linear-gradient($color 33%, rgba(255, 255, 255, 0) 0%);
     background-position: left;
     background-size: $width $height;
     background-repeat: repeat-y;
+    overflow: hidden;
   }
 }
 
@@ -57,6 +60,7 @@
     left: 0;
     width: 100%;
     height: $height;
+    background-image: url('../img/gradient/horizontal-gradient-black.png');
     background-image: linear-gradient(to right, $color 33%, rgba(255, 255, 255, 0) 0%);
     background-position: bottom;
     background-size: $width $height;
@@ -71,6 +75,7 @@
   -moz-border-radius: $radius;
   border-radius: $radius;
   background-clip: padding-box;
+  behavior: url(js/PIE.htc);
 }
 
 @mixin border-shadow($top: none, $right: 2px solid $dark-shadow, $bottom: 2px solid $dark-shadow, $left: none, $radius: 10px) {

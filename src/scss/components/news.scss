@@ -32,7 +32,7 @@
       @include vertical-dots();
     }
     .news-article-list {
-      @include vertical-dots(rgba(0, 0, 0, 0.2));
+      @include vertical-dots(rgba(0, 0, 0, 0.2), 1px, 5px, '../img/gradient/vertical-gradient-black.png');
     }
   }
 }
@@ -41,6 +41,7 @@
   margin: 0;
   padding: 20px;
   font-size: 12px;
+  font-weight: bold;
   text-transform: uppercase;
   color: #FFF;
   border-bottom: 2px solid $light-shadow;
